@@ -15,6 +15,8 @@
     <TextView
         android:id="@+id/textView"
         style="@style/MyFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/witamy_w_aplikacji" />
 
     <EditText
@@ -35,7 +37,8 @@
 
     <Button
         android:id="@+id/button"
-        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Login" />
 
     <View
@@ -45,5 +48,7 @@
     <TextView
         android:id="@+id/textView2"
         style="@style/MyFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="@string/register_account" />
 </LinearLayout>

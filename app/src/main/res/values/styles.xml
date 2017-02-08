@@ -6,20 +6,18 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/MyButton</item>
     </style>
 
-    <style name="ButtonStyle">
+    <style name="MyButton">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@color/colorPrimaryDark</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">8dp</item>
         <item name="android:textSize">20dp</item>
         <item name="android:textAllCaps">false</item>
     </style>
 
     <style name="MyFont">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorPrimaryDark</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:textSize">20dp</item>
