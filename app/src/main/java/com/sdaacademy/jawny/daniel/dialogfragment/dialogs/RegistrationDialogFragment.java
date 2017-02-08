@@ -9,14 +9,13 @@ import android.view.ViewGroup;
 
 import com.sdaacademy.jawny.daniel.dialogfragment.R;
 
-public class RegistrationDialog extends DialogFragment {
+public class RegistrationDialogFragment extends DialogFragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.registration, container);
+        View view = inflater.inflate(R.layout.dialog_register, container);
 
         return view;
-
     }
 }

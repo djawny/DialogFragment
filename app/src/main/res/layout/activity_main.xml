@@ -13,14 +13,14 @@
     tools:context="com.sdaacademy.jawny.daniel.dialogfragment.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcomeView"
         style="@style/MyFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/witamy_w_aplikacji" />
 
     <EditText
-        android:id="@+id/loginText"
+        android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -28,7 +28,7 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/passwordText"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -36,13 +36,13 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Login" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/registerAccountButton"
         style="@style/MyFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
