@@ -2,6 +2,7 @@ package com.sdaacademy.jawny.daniel.dialogfragment.dialogs;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,13 @@ public class RegistrationDialogFragment extends AbstactDialogFragment {
             @Override
             public void onClick(View v) {
                 if (onRegisterClickListener != null) {
+                    String login = registerLogin.getText().toString();
+                    String password = registerPassword.getText().toString();
+                    onRegisterClickListener.onClick(login, password);
+                } else {
+                    Log.v(getClass().getSimpleName(), "No one cares!");
                 }
+                dismiss();
             }
         });
     }
