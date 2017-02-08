@@ -15,6 +15,8 @@ public class RegistrationDialogFragment extends DialogFragment {
 
     private static final String TAG = RegistrationDialogFragment.class.getSimpleName();
 
+    private int lol = 5;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
