@@ -8,24 +8,39 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.sdaacademy.jawny.daniel.dialogfragment.R;
 
 public class RegistrationDialogFragment extends DialogFragment {
 
     private static final String TAG = RegistrationDialogFragment.class.getSimpleName();
-
-    private int lol = 5;
+    private EditText registerLogin;
+    private EditText registerPassword;
+    private EditText registerEmail;
+    private Button registerButton;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.dialog_register, container);
+        View view = inflater.inflate(R.layout.dialog_register, container);
+        bindViews(view);
+        return view;
+    }
+
+    private void bindViews(View view) {
+        registerLogin = (EditText) view.findViewById(R.id.registerLogin);
+        registerPassword = (EditText) view.findViewById(R.id.registerPassword);
+        registerEmail = (EditText) view.findViewById(R.id.registerEmail);
+        registerButton = (Button) view.findViewById(R.id.registerButton);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+//        getView().findViewById();
     }
 
     @Override
