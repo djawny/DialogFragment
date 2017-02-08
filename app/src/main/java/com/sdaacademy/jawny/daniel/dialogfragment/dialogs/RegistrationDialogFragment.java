@@ -13,7 +13,13 @@ import android.widget.EditText;
 
 import com.sdaacademy.jawny.daniel.dialogfragment.R;
 
-public class RegistrationDialogFragment extends DialogFragment {
+public class RegistrationDialogFragment extends DialogFragment implements View.OnClickListener {
+
+    public interface OnDismissListener {
+        void onDismiss();
+    }
+
+    private OnDismissListener onDismissListener;
 
     private static final String TAG = RegistrationDialogFragment.class.getSimpleName();
     private EditText registerLogin;
@@ -26,6 +32,7 @@ public class RegistrationDialogFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dialog_register, container);
         bindViews(view);
+        registerButton.setOnClickListener(this);
         return view;
     }
 
@@ -34,6 +41,21 @@ public class RegistrationDialogFragment extends DialogFragment {
         registerPassword = (EditText) view.findViewById(R.id.registerPassword);
         registerEmail = (EditText) view.findViewById(R.id.registerEmail);
         registerButton = (Button) view.findViewById(R.id.registerButton);
+    }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        Log.i(TAG, "onDismiss");
+
+        if (onDismissListener != null) {
+            onDismissListener.onDismiss();
+        }
     }
 
     @Override
@@ -85,15 +107,8 @@ public class RegistrationDialogFragment extends DialogFragment {
     }
 
     @Override
-    public void onDismiss(DialogInterface dialog) {
-        super.onDismiss(dialog);
-        Log.i(TAG, "onDismiss");
-    }
-
-    @Override
     public void onDetach() {
         super.onDetach();
         Log.i(TAG, "onDetach");
     }
-
 }
