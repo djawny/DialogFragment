@@ -4,10 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import com.sdaacademy.jawny.daniel.dialogfragment.dialogs.RegistrationDialogFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements RegistrationDialogFragment.OnRegisterClickListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
@@ -20,8 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickRegister(View view) {
         RegistrationDialogFragment registrationDialogFragment = new RegistrationDialogFragment();
+        registrationDialogFragment.setOnRegisterClickListener(this);
         registrationDialogFragment.show(getSupportFragmentManager(), null);
 
+    }
+
+    @Override
+    public void onClick(String login, String password) {
+        ((TextView)findViewById(R.id.login)).setText(login);
+        ((TextView)findViewById(R.id.password)).setText(password);
     }
 
     @Override

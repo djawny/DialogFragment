@@ -22,6 +22,10 @@ public class RegistrationDialogFragment extends AbstactDialogFragment {
         void onClick(String login, String password);
     }
 
+    public void setOnRegisterClickListener(OnRegisterClickListener onRegisterClickListener) {
+        this.onRegisterClickListener = onRegisterClickListener;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
