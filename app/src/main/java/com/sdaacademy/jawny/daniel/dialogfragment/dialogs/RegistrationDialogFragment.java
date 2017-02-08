@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 import com.sdaacademy.jawny.daniel.dialogfragment.R;
 
-public class RegistrationDialogFragment extends AbstactDialogFragment implements View.OnClickListener {
+public class RegistrationDialogFragment extends AbstactDialogFragment {
     private EditText registerLogin;
     private EditText registerPassword;
     private EditText registerEmail;
@@ -31,7 +31,14 @@ public class RegistrationDialogFragment extends AbstactDialogFragment implements
     }
 
     private void setListener() {
-        registerButton.setOnClickListener(this);
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (onRegisterClickListener != null) {
+
+                }
+            }
+        });
     }
 
     private void bindViews(View view) {
@@ -40,11 +47,4 @@ public class RegistrationDialogFragment extends AbstactDialogFragment implements
         registerEmail = (EditText) view.findViewById(R.id.registerEmail);
         registerButton = (Button) view.findViewById(R.id.registerButton);
     }
-
-    @Override
-    public void onClick(View v) {
-
-    }
-
-
 }
