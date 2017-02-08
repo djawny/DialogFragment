@@ -35,7 +35,6 @@ public class RegistrationDialogFragment extends AbstactDialogFragment {
             @Override
             public void onClick(View v) {
                 if (onRegisterClickListener != null) {
-
                 }
             }
         });
