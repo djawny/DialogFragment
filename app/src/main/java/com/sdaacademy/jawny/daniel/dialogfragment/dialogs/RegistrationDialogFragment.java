@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import com.sdaacademy.jawny.daniel.dialogfragment.R;
 
-public class RegistrationDialogFragment extends AbstactDialogFragment {
+public class RegistrationDialogFragment extends AbstractDialogFragment {
     private EditText registerLogin;
     private EditText registerPassword;
     private EditText registerEmail;

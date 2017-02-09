@@ -7,7 +7,7 @@ import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.View;
 
-public abstract class AbstactDialogFragment extends DialogFragment{
+public abstract class AbstractDialogFragment extends DialogFragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
