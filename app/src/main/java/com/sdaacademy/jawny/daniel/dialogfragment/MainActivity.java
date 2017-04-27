@@ -1,16 +1,25 @@
 package com.sdaacademy.jawny.daniel.dialogfragment;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import com.sdaacademy.jawny.daniel.dialogfragment.dialogs.RegistrationDialogFragment;
+import com.sdaacademy.jawny.daniel.dialogfragment.dialog.RegistrationDialogFragment;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements RegistrationDialogFragment.OnRegisterClickListener {
 
     public static final String TAG = MainActivity.class.getSimpleName();
+
+    @BindView(R.id.login)
+    TextView mLogin;
+
+    @BindView(R.id.password)
+    TextView mPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,52 +28,16 @@ public class MainActivity extends AppCompatActivity implements RegistrationDialo
         Log.i(TAG, "onCreate");
     }
 
-    public void clickRegister(View view) {
+    @OnClick(R.id.register_account_button)
+    public void onRegisterAccountButtonClicked(View view) {
         RegistrationDialogFragment registrationDialogFragment = new RegistrationDialogFragment();
         registrationDialogFragment.setOnRegisterClickListener(this);
         registrationDialogFragment.show(getSupportFragmentManager(), null);
-
     }
 
     @Override
     public void onClick(String login, String password) {
-        ((TextView)findViewById(R.id.login)).setText(login);
-        ((TextView)findViewById(R.id.password)).setText(password);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i(TAG, "onStart");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i(TAG, "onResume");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.i(TAG, "onRestart");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i(TAG, "onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i(TAG, "onStop");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.i(TAG, "onDestroy");
+        mLogin.setText(login);
+        mPassword.setText(password);
     }
 }

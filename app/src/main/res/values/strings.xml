@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">DialogFragment</string>
     <string name="register_account"><u>register account</u></string>
-    <string name="witamy_w_aplikacji"><b>Witamy w aplikacji!</b></string>
+    <string name="witamy_w_aplikacji"><b>Welcome!</b></string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="register">Register</string>
 </resources>

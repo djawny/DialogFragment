@@ -13,7 +13,7 @@
     tools:context="com.sdaacademy.jawny.daniel.dialogfragment.MainActivity">
 
     <TextView
-        android:id="@+id/welcomeView"
+        android:id="@+id/welcome_view"
         style="@style/MyFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Login"
+        android:hint="@string/login"
         android:inputType="textPersonName" />
 
     <EditText
@@ -32,21 +32,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/login_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="@string/login" />
 
     <TextView
-        android:id="@+id/registerAccountButton"
+        android:id="@+id/register_account_button"
         style="@style/MyFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/register_account"
-        android:onClick="clickRegister"/>
+        android:text="@string/register_account"/>
 </LinearLayout>
