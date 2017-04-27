@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.sdaacademy.jawny.daniel.dialogfragment.dialog.RegistrationDialogFragment;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements RegistrationDialogFragment.OnRegisterClickListener {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements RegistrationDialo
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         Log.i(TAG, "onCreate");
     }
 

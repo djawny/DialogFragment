@@ -12,6 +12,7 @@ import android.widget.EditText;
 import com.sdaacademy.jawny.daniel.dialogfragment.R;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class RegistrationDialogFragment extends DialogFragment {
@@ -40,7 +41,9 @@ public class RegistrationDialogFragment extends DialogFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.dialog_register, container);
+        View view = inflater.inflate(R.layout.dialog_register, container);
+        ButterKnife.bind(this,view);
+        return view;
     }
 
     @OnClick(R.id.register_button)
